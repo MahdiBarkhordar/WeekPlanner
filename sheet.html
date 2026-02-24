@@ -3,25 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>برنامه ریزی هفتگی</title>
      <link rel="stylesheet" href="checkbox.css">
     <style>
         body {
-            display: flex;
+            /* display: flex; */
             
         }
 
+body {
+  width: 100%;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+
+        .plan-tabel {
+          border-radius: 15px;
+          background-color: #fff;
+        }
+                .plan-cont {
+          background-color: #fff;
+        }
+
+        .planner-tabel {
+          color: #4e4e4e;
+          display: flex;
+          border: 10px solid;
+          border-radius: 25px;
+        }
+        .week-progress-div {
+          justify-content: center;
+          height: 200px;
+          font-family: iranyekan;
+          display: flex;
+          margin-bottom: 35px;
+          margin-top: 35px;
+                  background-color: #fff;
+            /* border: 2px solid #00bbff; */
+            /* border-bottom: none; */
+            width: 1040px;
+            border-collapse: unset;
+            /* margin-left: 10px; */
+            margin-right: 35px;
+            border-radius: 25px;
+                      /* color: #ffe2b6; */
+          /* border: 10px solid; */
+          /* border-radius: 0 0 25px 25px; */
+        }
+        .planner-heading-1 {
+          color: #00698f;
+          font-family: Arial;
+          margin-left: 40px;
+          margin-right: 250px;
+          text-align: left;
+        }
+
+        .planner-heading-2 {
+          justify-content: center;
+          color: #4e4e4e;
+          font-family: Arial;
+          text-align: center;
+        }
+
+        .progress-div {
+          /* box-shadow: 0px 0px 10px 0.5px#00bbff; */
+          justify-content: center;
+          align-items: center;
+          font-family: iranyekan;
+          display: flex;
+          margin-bottom: 35px;
+          margin-top: 35px;
+                  background-color: #ffffff;
+            /* border: 2px solid #00bbff; */
+            /* border-bottom: none; */
+            width: 420px;
+            border-collapse: unset;
+            margin-left: 10px;
+            margin-right: 35px;
+            /* border-radius: 15px;
+                      color: #00989d;
+          border: 10px solid; */
+          border-radius: 25px;
+        }
+
                 .plan-cont1 {
-            border: 2px solid #00eaff;
+                  background-color: #fff;
+            border: 10px solid #00698f;
             /* border-bottom: none; */
             width: 400px;
             border-collapse: unset;
-            margin-right: 25px;
+            margin-left: 10px;
+            margin-right: 35px;
             border-radius: 15px;
+                      /* color: #4e4e4e; */
+          /* border: 10px solid; */
+          border-radius: 25px;
         }
 
         .plan-cont {
-            border: 2px solid #00eaff;
+            border: 2px solid #00bbff;
             /* border-bottom: none; */
             width: 250px;
             border-collapse: unset;
@@ -33,12 +117,12 @@
             font-family: dana;
             font-weight: 500;
             display: flex;
-            border-bottom: 2px solid #00eaff;
+            border-bottom: 2px solid #00bbff;
             height: 35px;
             justify-content: center;
             text-align: center;
             align-items: center;
-            background: #00eaff;
+            background: #00bbff;
             border-radius: 15px 15px 0 0;
             /* background: linear-gradient(180deg, rgba(179, 255, 0, 0.31) 0%, rgba(237, 221, 83, 0) 100%); */
         }
@@ -53,7 +137,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* border-bottom: 2px solid #00eaff; */
+            /* border-bottom: 2px solid #00bbff; */
             text-align: center;
             font-size: 12px;
             font-family: dana;
@@ -66,9 +150,9 @@
         .plan-tabel input[type="text"] {
             width: 250px;
             border: 0px;
-            border-left: 2px solid #00eaff;
-            border-right: 2px solid #00eaff;
-            border-bottom: 2px solid #00eaff12;
+            border-left: 2px solid #00bbff;
+            border-right: 2px solid #00bbff;
+            border-bottom: 2px solid #00bbff12;
             cursor: cell;
             text-align: center;
             font-size: 12px;
@@ -84,9 +168,10 @@
             cursor: text;
         }
         .plan-tabel input[class="plan-time"] {
+          background-color: #00bbff00;
             width: 90px;
             border: 0px;
-            border-bottom: 2px solid #00eaff12;
+            border-bottom: 2px solid #00bbff12;
             text-align: center;
             font-size: 12px;
             font-family: dana;
@@ -169,8 +254,8 @@
             text-align: center;
             display: flex;
             height: 20px;
-            background: #bbf9ffcb;
-            border-bottom: 1px solid #00eaff;
+            background: #7bdcff;
+            border-bottom: 1px solid #00bbff;
         }
 
         .plan-name {
@@ -179,7 +264,7 @@
             justify-content: center;
             display: flex;
             height: 20px;
-            background: #bbf9ffcb;
+            background: #7bdcff;
         }
 
         .plan-counter {
@@ -191,14 +276,14 @@
         }
 
         .planer-name {
-            border-bottom: 1px solid #00eaff;
+            border-bottom: 1px solid #00bbff;
             height: 100%;
             text-align: center;
             /* padding-top: 8px; */
             width: 350px;
             font-size: 11px;
             font-family: dana;
-            border-right: 1px solid #00eaff;
+            border-right: 1px solid #00bbff;
         }
 
         .purpose-1 {
@@ -210,7 +295,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-top: 1px solid #00eaff;
+            border-top: 1px solid #00bbff;
             text-align: center;
             font-size: 11px;
             font-family: dana;
@@ -219,9 +304,9 @@
             height: 100%;
             width: 250px;
             border: 0px;
-            border-left: 1px solid #00eaff;
-            /* border-right: 2px solid #00eaff; */
-            border-top: 1px solid #00eaff;
+            border-left: 1px solid #00bbff;
+            /* border-right: 2px solid #00bbff; */
+            border-top: 1px solid #00bbff;
             cursor: cell;
             text-align: center;
             font-size: 11px;
@@ -233,19 +318,90 @@
             height: 100%;
             width: 100px;
             border: 0px;
-            border-top: 1px solid #00eaff;
+            border-top: 1px solid #00bbff;
             text-align: center;
             font-size: 11px;
             font-family: dana;
         }
 
+        .planner {
+          display: flex;
+        }
+
+            /* دایره‌ای */
+    .circle-container {
+        height: 150px;
+        /* position: relative; */
+        /* margin: 20px auto; */
+    }
+
+    .circle-bg {
+        fill: none;
+        stroke: #ddd;
+        stroke-width: 10;
+    }
+
+    .circle-progress2, .circle-progress3, .circle-progress4, .circle-progress5, .circle-progress {
+        fill: none;
+        stroke: #009b05;
+        stroke-width: 10;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: stroke-dashoffset 0.3s;
+    }
+
+    .circle-text2, .circle-text3, .circle-text4, .circle-text5, .circle-text {
+        font-size: 22px;
+        fill: #333;
+        dominant-baseline: middle;
+        text-anchor: middle;
+    }
+
+    .circle-container input {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0;
+        border-radius: 6px;
+        border: 1px solid #aaa;
+        outline: none;
+    }
+
+    .circle-container input:focus {
+        border-color: #4caf50;
+        box-shadow: 0 0 5px #4caf50;
+    }
+    /* From Uiverse.io by AspenBranch */ 
+.progress-div {
+  background: repeating-linear-gradient(45deg, #b6e8ff, #b6e8ff 20px, #d1f0ff 20px, #d1f0ff 40px);
+}
+
+.week-progress-div {
+  background: repeating-linear-gradient(45deg, #b6ffea, #b6ffea 20px, #5ad8bdad 20px, #5ad8bdad 40px);
+}
+
+.cont-blur {
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  /* text-align: center; */
+  /* backdrop-filter: blur(7px); */
+  border-radius: 25px;
+}
 
 
     </style>
 
 </head>
 <body>
-    <div class="plan-cont1">
+  <div style="display: flex;">
+    <h1 class="planner-heading-1">MY PLANNER</h1>
+    <h1 class="planner-heading-2">DAILY & WEEKLY PLANNER</h1>
+  </div>
+  <div class="planner">
+    <div styl>
+          <div class="plan-cont1">
         <div class="plan-header">
             عادت روزانه
         </div>
@@ -380,9 +536,10 @@
         </div>
     </div>
 
+    </div>
 
-
-    <div class="plan-cont" style="border: 3px solid #f280ff6c; border-bottom: 3px solid #f280ff6c; border-right: 3px solid #f280ff6c; margin-right: 0; border-radius: 15px 0 0 15px;">
+    <div class="planner-tabel">
+          <div class="plan-cont" style="border: 3px solid #f280ff6c; border-bottom: 3px solid #f280ff6c; border-right: 3px solid #f280ff6c; margin-right: 0; border-radius: 15px 0 0 15px;">
         <div class="week-header" style="border-radius: 12px 0 0 0;">
                 هفته اول
         </div>
@@ -410,7 +567,7 @@
                     <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -431,7 +588,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -452,7 +609,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -473,7 +630,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -494,7 +651,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -515,7 +672,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -536,7 +693,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked type="checkbox" id="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -559,7 +716,7 @@
         <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -580,7 +737,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -601,7 +758,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -622,7 +779,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -643,7 +800,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -664,7 +821,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -685,7 +842,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -707,7 +864,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -728,7 +885,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -749,7 +906,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -770,7 +927,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -791,7 +948,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -812,7 +969,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -833,7 +990,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -855,7 +1012,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -876,7 +1033,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -897,7 +1054,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -918,7 +1075,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -939,7 +1096,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -960,7 +1117,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -981,7 +1138,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1003,7 +1160,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1024,7 +1181,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1045,7 +1202,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1066,7 +1223,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1087,7 +1244,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1108,7 +1265,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1129,7 +1286,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1151,7 +1308,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1172,7 +1329,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1193,7 +1350,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1214,7 +1371,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1235,7 +1392,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1256,7 +1413,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1277,7 +1434,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1299,7 +1456,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1320,7 +1477,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1341,7 +1498,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1362,7 +1519,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1383,7 +1540,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1404,7 +1561,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1425,7 +1582,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1447,7 +1604,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1468,7 +1625,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1489,7 +1646,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1510,7 +1667,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1531,7 +1688,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1552,7 +1709,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1573,7 +1730,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1595,7 +1752,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1616,7 +1773,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1637,7 +1794,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1658,7 +1815,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1679,7 +1836,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1700,7 +1857,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1721,7 +1878,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1743,7 +1900,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1764,7 +1921,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1785,7 +1942,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1806,7 +1963,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1827,7 +1984,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1848,7 +2005,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1869,7 +2026,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1891,7 +2048,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1912,7 +2069,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1933,7 +2090,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1954,7 +2111,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1975,7 +2132,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -1996,7 +2153,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2017,7 +2174,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2039,7 +2196,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2060,7 +2217,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2081,7 +2238,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2102,7 +2259,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2123,7 +2280,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2144,7 +2301,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2165,7 +2322,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2187,7 +2344,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2208,7 +2365,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2229,7 +2386,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2250,7 +2407,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2271,7 +2428,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2292,7 +2449,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2313,7 +2470,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2335,7 +2492,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2356,7 +2513,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2377,7 +2534,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2398,7 +2555,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2419,7 +2576,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2440,7 +2597,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2461,7 +2618,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2483,7 +2640,7 @@
                 <div class="week-tabel">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2504,7 +2661,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2525,7 +2682,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2546,7 +2703,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2567,7 +2724,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2588,7 +2745,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -2609,7 +2766,7 @@
 
                         <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input checked="" type="checkbox" id="cbx-12">
+                <input checked="" type="checkbox" id="cbx-12" class="cbx-12">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="10" width="14">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -9385,28 +9542,193 @@
         </div>
 
     </div>
+  </div>
+    </div>
+    <div style="display: flex;">
+      <div class="progress-div">
+        <div class="circle-container">
+            <svg width="150" height="150">
+                <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                <circle class="circle-progress" style="stroke: #00bbff; width: 25%;" cx="75" cy="75" r="60"></circle>
+                <text id="circleText" class="circle-text" x="75" y="75">0%</text>
+            </svg>
+        </div>
+      </div>
+      <div class="week-progress-div">
+        <div class="cont-blur">
+          <div class="circle-container"  style=" margin-left: 70px; width: 25%;">
+              <svg width="150" height="150" >
+                  <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                  <circle class="circle-progress2" style="stroke: #00915e; " cx="75" cy="75" r="60"></circle>
+                  <text id="circleText2" class="circle-text" x="75" y="75">0%</text>
+              </svg>
+          </div>
 
+
+          <div class="circle-container" style="width: 25%;">
+              <svg width="150" height="150">
+                  <circle class="circle-bg" cx="75" cy="75" r="60" style=""></circle>
+                  <circle class="circle-progress3" style="stroke: #00915e;" cx="75" cy="75" r="60"></circle>
+                  <text id="circleText3" class="circle-text" x="75" y="75">0%</text>
+              </svg>
+          </div>
+
+
+          <div class="circle-container" style="width: 25%;"> 
+              <svg width="150" height="150">
+                  <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                  <circle class="circle-progress4" style="stroke: #00915e;" cx="75" cy="75" r="60"></circle>
+                  <text id="circleText4" class="circle-text" x="75" y="75">0%</text>
+              </svg>
+          </div>
+
+
+          <div class="circle-container" style="width: 25%;">
+              <svg width="150" height="150">
+                  <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                  <circle class="circle-progress5" style="stroke: #00915e;" cx="75" cy="75" r="60"></circle>
+                  <text id="circleText5" class="circle-text" x="75" y="75">0%</text>
+              </svg>
+          </div>
+          
+  
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    
 
     <script>
+
+          const checkboxes = document.querySelectorAll(".cbx-12");
+
+    const totalChecks = checkboxes.length;
+
+    const circle2 = document.querySelector(".circle-progress2");
+    const circleText2 = document.getElementById("circleText2");
+
+    const radius2 = 60;
+    const circumference2 = 2 * Math.PI * radius2;
+    circle2.style.strokeDasharray = circumference2;
+
+    // بازیابی داده‌ها
+    window.addEventListener("load", () => {
+        checkboxes.forEach(cbx => {
+            const saved = localStorage.getItem("checkbox_" + cbx.class);
+            cbx.checked = saved === "true";
+        });
+
+        updateProgress();
+    });
+
+    function updateProgress() {
+        let filled = 0;
+
+        checkboxes.forEach(cbx => {
+            localStorage.setItem("checkbox_" + cbx.id, cbx.checked);
+            if (cbx.checked) filled++;
+        });
+
+        let percent = (filled / totalChecks) * 100;
+
+        let offset = circumference2 - (percent / 100) * circumference2;
+        circle2.style.strokeDashoffset = offset;
+
+        circleText2.textContent = Math.round(percent) + "%";
+
+        localStorage.setItem("progress_percent", percent);
+    }
+
+    checkboxes.forEach(cbx => cbx.addEventListener("change", updateProgress));
+
+
+
+    const inputs = document.querySelectorAll(".name-of-plan");
+    const totalInputs = inputs.length;
+
+    const circle = document.querySelector(".circle-progress");
+    const circleText = document.getElementById("circleText");
+
+    const radius = 60;
+    const circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = circumference;
+
+    // ------------------------
+    //  خواندن داده‌ها از localStorage
+    // ------------------------
+    inputs.forEach(inp => {
+        let key = "input_" + inp.dataset.id;
+        let saved = localStorage.getItem(key);
+
+        if (saved !== null) {
+            inp.value = saved;
+        }
+    });
+
+    function updateProgress() {
+        let filled = 0;
+
+        inputs.forEach(inp => {
+            // ذخیره هر تغییر
+            let key = "input_" + inp.dataset.id;
+            localStorage.setItem(key, inp.value);
+
+            if (inp.value.trim().length >= 3) filled++;
+        });
+
+        let percent = (filled / totalInputs) * 100;
+        let offset = circumference - (percent / 100) * circumference;
+
+        circle.style.strokeDashoffset = offset;
+        circleText.textContent = Math.round(percent) + "%";
+
+        // درصد پیشرفت هم ذخیره شود
+        localStorage.setItem("progress_percent", percent);
+    }
+
+    // اجرای اولیه بعد از لود
+    window.addEventListener("load", () => {
+        let savedPercent = localStorage.getItem("progress_percent");
+
+        if (savedPercent !== null) {
+            let offset = circumference - (savedPercent / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+            circleText.textContent = Math.round(savedPercent) + "%";
+        }
+    });
+
+    // هر تغییری → بروزرسانی + ذخیره
+    inputs.forEach(inp => inp.addEventListener("input", updateProgress));
+
+
+
+
+
       document.querySelectorAll(".name-of-plan").forEach((input, index) => {
       
           // لود مقدار قدیمی
-          input.value = localStorage.getItem("textInput_" + index) || "";
+          input.value = localStorage.getItem("field1" + index) || "";
       
           // ذخیره هنگام تایپ
           input.addEventListener("input", () => {
-              localStorage.setItem("textInput_" + index, input.value);
+              localStorage.setItem("field1" + index, input.value);
           });
       
       });
             document.querySelectorAll(".plan-time").forEach((input, index) => {
       
           // لود مقدار قدیمی
-          input.value = localStorage.getItem("textInput_" + index) || "";
+          input.value = localStorage.getItem("field2" + index) || "";
       
           // ذخیره هنگام تایپ
           input.addEventListener("input", () => {
-              localStorage.setItem("textInput_" + index, input.value);
+              localStorage.setItem("field2" + index, input.value);
           });
       
       });
@@ -9416,22 +9738,44 @@
       document.querySelectorAll("#cbx-12").forEach((box, index) => {
 
     // موقع باز شدن صفحه، وضعیت قبلی را لود کن
-    box.checked = localStorage.getItem("checkbox_" + index) === "true";
+    box.checked = localStorage.getItem("checkbox_1" + index) === "true";
 
     // هر تغییری ذخیره شود
     box.addEventListener("change", () => {
-        localStorage.setItem("checkbox_" + index, box.checked);
+        localStorage.setItem("checkbox_1" + index, box.checked);
     });
 
 });
       document.querySelectorAll("#cbx-13").forEach((box, index) => {
 
     // موقع باز شدن صفحه، وضعیت قبلی را لود کن
-    box.checked = localStorage.getItem("checkbox_" + index) === "true";
+    box.checked = localStorage.getItem("checkbox_2" + index) === "true";
 
     // هر تغییری ذخیره شود
     box.addEventListener("change", () => {
-        localStorage.setItem("checkbox_" + index, box.checked);
+        localStorage.setItem("checkbox_2" + index, box.checked);
+    });
+
+});
+      document.querySelectorAll("#cbx-14").forEach((box, index) => {
+
+    // موقع باز شدن صفحه، وضعیت قبلی را لود کن
+    box.checked = localStorage.getItem("checkbox_3" + index) === "true";
+
+    // هر تغییری ذخیره شود
+    box.addEventListener("change", () => {
+        localStorage.setItem("checkbox_3" + index, box.checked);
+    });
+
+});
+      document.querySelectorAll("#cbx-15").forEach((box, index) => {
+
+    // موقع باز شدن صفحه، وضعیت قبلی را لود کن
+    box.checked = localStorage.getItem("checkbox_4" + index) === "true";
+
+    // هر تغییری ذخیره شود
+    box.addEventListener("change", () => {
+        localStorage.setItem("checkbox_4" + index, box.checked);
     });
 
 });
